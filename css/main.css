@@ -4,7 +4,7 @@ Author by: T_T
 Project:	Begreen
 Version:	1.1
 Last change:	28/11/16 [fixed Float bug, vf]
-Primary use:	Blog, Shop 
+Primary use:	Blog, Shop
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------------
 COMMON STYLING
@@ -78,6 +78,9 @@ a {
 a:hover {
   color: #94da46;
 }
+
+
+
 body * {
   margin: 0;
   padding: 0;
@@ -5141,7 +5144,7 @@ recent-news
 }
 /*
 * Single Post
-* 
+*
  */
 .single-post .site-content-single-post {
   overflow: hidden;
@@ -5655,7 +5658,7 @@ recent-news
 */
 .blog-wrap {
   margin-bottom: 0;
-  /* 
+  /*
   *   Blog Masonry
   */
   /*
@@ -14752,7 +14755,7 @@ header.header.yolo-header-style-4 .header-sidebar .form-input a {
 }
 .yolo-header-style-10 .header-right .shopping-cart-wrapper .widget_shopping_cart_content .widget_shopping_cart_icon > i.wicon {
   font-size: 18px;
-  width: auto;
+  width: 22px;
 }
 .yolo-header-style-10 .header-right .shopping-cart-wrapper .widget_shopping_cart_icon span.total {
   right: -14px;
