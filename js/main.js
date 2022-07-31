@@ -7,6 +7,7 @@ const DATABASE=[{id: "123", name:"fisrt_thing", price:40},
 {id: "127", name:"fifth_thing", price:33},
 {id: "128", name:"sixth_thing", price:40}]
 let arbuttons=[];
+let arinputs=[];
 
 
 
@@ -16,6 +17,7 @@ let cartsum=document.querySelector(`.total_sum`);
 for (let i=0; i<Num_goods; i++)
 {
   arbuttons.push(document.querySelector(`.button${i+1}`));
+  arinputs.push(document.querySelector(`.input${i+1}`));
 }
 
 
@@ -24,12 +26,13 @@ for (let i=0; i<Num_goods; i++)
 {
   arbuttons[i].onclick=async function()
   {
-    cartnum.textContent=parseInt(cartnum.textContent)+1;
+    let multi=Number(arinputs[i].value) || 1;
+    cartnum.textContent=Number(cartnum.textContent)+1*multi;
     let item=undefined;
     let getFromDf=new Promise((resolve, reject)=>
     setTimeout(resolve(DATABASE[i]), 2000)).then(
       function(result) {item=result; },
       function(result) {throw result;});
-    cartsum.textContent=await parseInt(cartsum.textContent)+item['price'];
+    cartsum.textContent=await parseInt(cartsum.textContent)+item['price']*multi;
   };
 }
